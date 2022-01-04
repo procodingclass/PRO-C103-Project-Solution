@@ -12,7 +12,7 @@ from watchdog.events import FileSystemEventHandler
 from_dir = "C:/Users/preet/Downloads"
 
 # Event Hanlder Class
-class FileMovementHandler(FileSystemEventHandler):
+class FileEventHandler(FileSystemEventHandler):
 
     def on_created(self, event):
         print(f"Hey, {event.src_path} has been created!")
@@ -29,7 +29,7 @@ class FileMovementHandler(FileSystemEventHandler):
 
 
 # Initialize Event Handler Class
-event_handler = FileMovementHandler()
+event_handler = FileEventHandler()
 
 # Initialize Observer
 observer = Observer()
